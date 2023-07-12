@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Expense View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="NewExpenseViewController" id="Y6W-OH-hqX" customClass="NewExpenseViewController" customModule="BudgetManagment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="M6a-kd-eLP">
+                                <rect key="frame" x="30" y="338" width="333" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BE3-vn-vH5"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Income"/>
+                                    <segment title="Expense"/>
+                                </segments>
+                                <connections>
+                                    <action selector="incomeExpenseControlValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="QRA-FQ-MD8"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="IBg-K8-EIG">
+                                <rect key="frame" x="30" y="139" width="333" height="126"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D1F-hD-hOE">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
+                                        <color key="backgroundColor" red="0.24313727020000001" green="0.24313727020000001" blue="0.31764706970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="d4k-Ct-Vat"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wtb-k1-irX">
+                                        <rect key="frame" x="0.0" y="76" width="333" height="50"/>
+                                        <color key="backgroundColor" red="0.24313727020000001" green="0.24313727020000001" blue="0.31764706970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9uQ-ku-JhS"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNL-3Q-gI5">
+                                <rect key="frame" x="30" y="517.33333333333337" width="333" height="40"/>
+                                <color key="backgroundColor" red="0.89019608500000003" green="0.3803921938" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hZB-5a-Eal"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ADD"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Qkj-1S-7gT"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="7du-Vv-WLt">
+                                <rect key="frame" x="60" y="399" width="303" height="34"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.24313727020000001" green="0.24313727020000001" blue="0.31764706970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zNL-3Q-gI5" firstAttribute="top" secondItem="7du-Vv-WLt" secondAttribute="bottom" constant="84" id="6M5-vp-ws6"/>
+                            <constraint firstItem="7du-Vv-WLt" firstAttribute="top" secondItem="M6a-kd-eLP" secondAttribute="bottom" constant="21" id="9tN-qT-l9h"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M6a-kd-eLP" secondAttribute="trailing" constant="30" id="LxM-Os-41L"/>
+                            <constraint firstItem="7du-Vv-WLt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="THd-Xu-AeB"/>
+                            <constraint firstItem="M6a-kd-eLP" firstAttribute="top" secondItem="IBg-K8-EIG" secondAttribute="bottom" constant="73" id="Ui6-TK-JB8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zNL-3Q-gI5" secondAttribute="trailing" constant="30" id="VS7-d5-H58"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IBg-K8-EIG" secondAttribute="trailing" constant="30" id="cT9-9j-1wN"/>
+                            <constraint firstItem="M6a-kd-eLP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ctV-Mg-GPS"/>
+                            <constraint firstItem="IBg-K8-EIG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="hdt-W1-66j"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7du-Vv-WLt" secondAttribute="trailing" constant="30" id="ise-By-gW0"/>
+                            <constraint firstItem="IBg-K8-EIG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="nOu-Ig-53W"/>
+                            <constraint firstItem="zNL-3Q-gI5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="u1w-oj-iHX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="zNL-3Q-gI5" id="1qY-76-qPC"/>
+                        <outlet property="amountTextField" destination="D1F-hD-hOE" id="eI3-Il-jzn"/>
+                        <outlet property="categoriesTextField" destination="Wtb-k1-irX" id="9lp-6I-U4K"/>
+                        <outlet property="datePicker" destination="7du-Vv-WLt" id="9Rf-DA-mAR"/>
+                        <outlet property="ınOrExControl" destination="M6a-kd-eLP" id="nNH-Ct-98b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+</document>

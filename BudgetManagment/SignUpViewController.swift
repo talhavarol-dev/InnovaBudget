@@ -21,6 +21,8 @@ final class SignUpViewController: UIViewController, SignUpViewModelDelegate {
         configureTextField(passwordTextField, withPlaceholder: "Password")
         configureLoginButton()
         viewModel.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     //MARK: - IBActions
     @IBAction private func signUpButtonTapped(_ sender: Any) {
@@ -49,11 +51,10 @@ final class SignUpViewController: UIViewController, SignUpViewModelDelegate {
         let alert = UIAlertController(title: "Success", message: "Signed up successfully", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
             DispatchQueue.main.async {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let storyboard = UIStoryboard(name: "Login", bundle: nil)
                 if let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
                     let navigationController = UINavigationController(rootViewController: loginViewController)
                     navigationController.modalPresentationStyle = .fullScreen
-                    //navigationController.modalTransitionStyle = .crossDissolve
                     self?.present(navigationController, animated: true, completion: nil)
                 }}}))
         self.present(alert, animated: true, completion: nil)
@@ -63,6 +64,12 @@ final class SignUpViewController: UIViewController, SignUpViewModelDelegate {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // "strong password" metnini gizle
+        textField.textContentType = .oneTimeCode
+        return true
+    }
 }

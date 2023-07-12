@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F26FFDEF-B6C1-49A7-9D14-8DD4B0925117"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C491829-747C-4D17-8D37-AB9C70786332"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetManagment/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "fetchTotalAmount()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C491829-747C-4D17-8D37-AB9C70786332 - f5b929ab0a1fe677"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Double) -&gt; () in BudgetManagment.HomeViewController.fetchTotalAmount() -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "352">
+               </Location>
+               <Location
+                  uuid = "4C491829-747C-4D17-8D37-AB9C70786332 - f5b929ab0a1fe677"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Double) -&gt; () in BudgetManagment.HomeViewController.fetchTotalAmount() -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
