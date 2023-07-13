@@ -10,10 +10,10 @@ import Foundation
 import FirebaseFirestore
 import Firebase
 
-class ItemViewModel {
+final class ExpenseViewModel {
     private let db = Firestore.firestore()
     private var expenses: [Expense] = []
-    
+
     var expenseCount: Int {
         return expenses.count
     }
@@ -24,7 +24,6 @@ class ItemViewModel {
             "amount": amount,
             "date": date
         ]
-        
         db.collection("expenses").addDocument(data: data) { error in
             if let error = error {
                 print("Veri kaydedilirken hata oluştu: \(error)")

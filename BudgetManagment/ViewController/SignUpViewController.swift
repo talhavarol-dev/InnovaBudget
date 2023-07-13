@@ -8,11 +8,11 @@
 import UIKit
 
 final class SignUpViewController: UIViewController, SignUpViewModelDelegate {
-    //MARK: - IBOutlets
+    //MARK: - IBOutlets and Properties
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var signUpButton: UIButton!
-    var viewModel = SignUpViewModel()
+    private lazy var viewModel = SignUpViewModel()
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -36,7 +36,6 @@ final class SignUpViewController: UIViewController, SignUpViewModelDelegate {
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)
         ]
-        
         textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes)
         textField.layer.cornerRadius = 15.0
         textField.layer.borderWidth = 2.0
@@ -65,10 +64,9 @@ final class SignUpViewController: UIViewController, SignUpViewModelDelegate {
         self.present(alert, animated: true, completion: nil)
     }
 }
-
+    //MARK: -Extensions
 extension SignUpViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // "strong password" metnini gizle
         textField.textContentType = .oneTimeCode
         return true
     }

@@ -13,24 +13,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-         window = UIWindow(windowScene: windowScene)
-         
-         // Kullanıcının oturumunun açık olup olmadığını kontrol edin.
-         if Auth.auth().currentUser != nil {
-             // Kullanıcı oturum açmış
-             let storyboard = UIStoryboard(name: "Home", bundle: nil)
-             let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
-             
-             window?.rootViewController = UINavigationController(rootViewController: homeViewController!)
-         } else {
-             // Kullanıcı oturum açmamış
-             let storyboard = UIStoryboard(name: "Login", bundle: nil)
-             if let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController {
-                 window?.rootViewController = UINavigationController(rootViewController: loginViewController)
-             }
-         }
-         window?.makeKeyAndVisible()
-     }
+
+        self.window = UIWindow(windowScene: windowScene)
+        if Auth.auth().currentUser != nil {
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabbarController") as? UITabBarController
+            self.window?.rootViewController = tabBarController
+        }
+        // Kullanıcı giriş yapmamış
+        else {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
+            self.window?.rootViewController = loginViewController
+        }
+        
+        self.window?.makeKeyAndVisible()
+    }
+
         
         func sceneDidDisconnect(_ scene: UIScene) {
             // Called as the scene is being released by the system.

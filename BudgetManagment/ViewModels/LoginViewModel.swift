@@ -8,15 +8,14 @@
 import Foundation
 import FirebaseAuth
 
-
 protocol LoginViewModelDelegate: AnyObject {
     func loginSucceeded()
     func loginFailed(with error: String)
 }
 
-class LoginViewModel {
+final class LoginViewModel {
     weak var delegate: LoginViewModelDelegate?
-  
+    
     func login(user: User) {
          Auth.auth().signIn(withEmail: user.email, password: user.password) { [weak self] authResult, error in
              if let error = error {

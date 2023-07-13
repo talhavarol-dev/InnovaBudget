@@ -7,47 +7,281 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4C491829-747C-4D17-8D37-AB9C70786332"
+            uuid = "C0892702-1ED2-43E1-9DBC-984994C4C873"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BudgetManagment/HomeViewController.swift"
+            filePath = "BudgetManagment/ViewModels/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "fetchTotalAmount()"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "login(user:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "4C491829-747C-4D17-8D37-AB9C70786332 - f5b929ab0a1fe677"
+                  uuid = "C0892702-1ED2-43E1-9DBC-984994C4C873 - c4cc5f253057171a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Double) -&gt; () in BudgetManagment.HomeViewController.fetchTotalAmount() -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BudgetManagment.LoginViewModel.login(user: BudgetManagment.User) -&gt; ()"
                   moduleName = "BudgetManagment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/HomeViewController.swift"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewModels/LoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "352">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "52">
                </Location>
                <Location
-                  uuid = "4C491829-747C-4D17-8D37-AB9C70786332 - f5b929ab0a1fe677"
+                  uuid = "C0892702-1ED2-43E1-9DBC-984994C4C873 - c4cc5f2530571735"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Double) -&gt; () in BudgetManagment.HomeViewController.fetchTotalAmount() -&gt; ()"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BudgetManagment.LoginViewModel.login(user: BudgetManagment.User) -&gt; ()"
                   moduleName = "BudgetManagment"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/HomeViewController.swift"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewModels/LoginViewModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "45"
-                  endingLineNumber = "45"
-                  offsetFromSymbolStart = "148">
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5007CD6-11CF-4E70-82C9-0033E85CBCB4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetManagment/ViewModels/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "login(user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B5007CD6-11CF-4E70-82C9-0033E85CBCB4 - 9675090f1f128973"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BudgetManagment.LoginViewModel.login(user: BudgetManagment.User) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewModels/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "B5007CD6-11CF-4E70-82C9-0033E85CBCB4 - c4cc5f253057110b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BudgetManagment.LoginViewModel.login(user: BudgetManagment.User) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewModels/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "B5007CD6-11CF-4E70-82C9-0033E85CBCB4 - 9675090f1f128912"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BudgetManagment.LoginViewModel.login(user: BudgetManagment.User) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewModels/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "B5007CD6-11CF-4E70-82C9-0033E85CBCB4 - c4cc5f253057112a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in BudgetManagment.LoginViewModel.login(user: BudgetManagment.User) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewModels/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "898DB50B-C7AA-4035-8FC7-4B6D6D152CA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetManagment/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "loginButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "898DB50B-C7AA-4035-8FC7-4B6D6D152CA8 - 235a54a3795a80b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BudgetManagment.LoginViewController.loginButtonTapped(Any) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "898DB50B-C7AA-4035-8FC7-4B6D6D152CA8 - 235a54a3795a80b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BudgetManagment.LoginViewController.loginButtonTapped(Any) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "898DB50B-C7AA-4035-8FC7-4B6D6D152CA8 - 235a54a3795a80b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BudgetManagment.LoginViewController.loginButtonTapped(Any) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "776">
+               </Location>
+               <Location
+                  uuid = "898DB50B-C7AA-4035-8FC7-4B6D6D152CA8 - 235a54a3795a809f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BudgetManagment.LoginViewController.loginButtonTapped(Any) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "898DB50B-C7AA-4035-8FC7-4B6D6D152CA8 - 235a54a3795a809f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BudgetManagment.LoginViewController.loginButtonTapped(Any) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "356">
+               </Location>
+               <Location
+                  uuid = "898DB50B-C7AA-4035-8FC7-4B6D6D152CA8 - 235a54a3795a809f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BudgetManagment.LoginViewController.loginButtonTapped(Any) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "776">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5DF6B373-2DAF-4034-819E-799178492DD2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetManagment/ViewController/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "loginButtonTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5DF6B373-2DAF-4034-819E-799178492DD2 - 235a54a3795a80b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BudgetManagment.LoginViewController.loginButtonTapped(Any) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "5DF6B373-2DAF-4034-819E-799178492DD2 - 235a54a3795a809f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BudgetManagment.LoginViewController.loginButtonTapped(Any) -&gt; ()"
+                  moduleName = "BudgetManagment"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/talhavarol/Desktop/Sekerbank/InnovaBudget/BudgetManagment/ViewController/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "104">
                </Location>
             </Locations>
          </BreakpointContent>

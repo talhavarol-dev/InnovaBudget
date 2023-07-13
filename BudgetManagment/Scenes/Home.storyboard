@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home View Controller-->
         <scene sceneID="M3K-5m-ehS">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="yoB-Mc-Fl8" customClass="HomeViewController" customModule="BudgetManagment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yoB-Mc-Fl8" customClass="HomeViewController" customModule="BudgetManagment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7q-6Y-TQf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,10 +51,7 @@
                             <constraint firstItem="cKE-AV-H9C" firstAttribute="bottom" secondItem="D12-Bm-d5w" secondAttribute="bottom" id="pxn-YX-rAK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="DLU-MJ-FHu"/>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="4aD-Ra-jSQ"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="9XH-PM-DeT">
                         <rightBarButtonItems>
                             <barButtonItem title="New" id="pcR-np-pTQ">
@@ -79,43 +76,114 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oK3-7J-S4c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4190.0763358778622" y="-322.53521126760563"/>
+            <point key="canvasLocation" x="5108" y="-244"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="7Dw-qr-iah">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="TwS-Gn-SFP" customClass="SettingsViewController" customModule="BudgetManagment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eje-C4-N5F">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0I-CP-1UR">
+                                <rect key="frame" x="30" y="163" width="333" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dmv-qI-qQ5"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="up3-Ua-9QJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SIGN OUT" cornerStyle="dynamic" titleAlignment="center">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.89019608500000003" green="0.3803921938" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="TwS-Gn-SFP" eventType="touchUpInside" id="7M5-YB-8X4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hUZ-xa-VuO"/>
+                        <color key="backgroundColor" red="0.24313727020000001" green="0.24313727020000001" blue="0.31764706970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="N0I-CP-1UR" firstAttribute="top" secondItem="hUZ-xa-VuO" secondAttribute="top" constant="60" id="3Bc-dQ-cS3"/>
+                            <constraint firstItem="hUZ-xa-VuO" firstAttribute="trailing" secondItem="N0I-CP-1UR" secondAttribute="trailing" constant="30" id="MSz-6w-ZJx"/>
+                            <constraint firstItem="N0I-CP-1UR" firstAttribute="leading" secondItem="hUZ-xa-VuO" secondAttribute="leading" constant="30" id="q97-Kf-8PN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yfk-8G-ahD"/>
+                    <connections>
+                        <outlet property="signOutButton" destination="N0I-CP-1UR" id="kCx-eD-3fX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ra6-SU-iKx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5109" y="439"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="WeJ-1t-M6a">
+        <scene sceneID="deL-9H-gxp">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="I5f-hU-b4o" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vnc-Zc-ZFT">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsO-Up-98d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="tabbarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CAL-Wf-ZrA" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="credit-card" id="3WM-rd-ffu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.26666668059999998" green="0.26666668059999998" blue="0.34117650989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.89019608500000003" green="0.3803921938" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.89019608500000003" green="0.3803921938" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.89019608500000003" green="0.3803921938" blue="0.56862747670000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="dtD-JF-I8f" kind="relationship" relationship="viewControllers" id="05B-4e-J7F"/>
+                        <segue destination="mNl-7S-ePQ" kind="relationship" relationship="viewControllers" id="24B-9u-CF3"/>
+                        <segue destination="eZC-F7-yaN" kind="relationship" relationship="viewControllers" id="LsH-qk-Tfj"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FmP-vd-Rl6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2338.1679389312976" y="-322.53521126760563"/>
+            <point key="canvasLocation" x="3192" y="51"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="X4F-mk-0Cy">
+        <!--Home-->
+        <scene sceneID="SiZ-Os-RTl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dtD-JF-I8f" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="E46-kZ-2zI"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mNl-7S-ePQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="0R8-BQ-gE0"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KlR-A1-LXt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="32F-lF-IXE">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="yoB-Mc-Fl8" kind="relationship" relationship="rootViewController" id="UiM-vy-Eu3"/>
+                        <segue destination="yoB-Mc-Fl8" kind="relationship" relationship="rootViewController" id="3dB-bn-FLz"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Or-wv-sOh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyf-M1-oyd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3264.8854961832058" y="-322.53521126760563"/>
+            <point key="canvasLocation" x="4183.9694656488546" y="-243.66197183098592"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Esh-Ny-T1u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eZC-F7-yaN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" id="CXu-jF-4WJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="80d-Jo-0ya">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TwS-Gn-SFP" kind="relationship" relationship="rootViewController" id="ub4-DT-RH4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YVo-2D-ZEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4184" y="439"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="credit-card" width="512" height="512"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+    </resources>
 </document>

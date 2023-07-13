@@ -49,7 +49,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="88Q-K2-tyS">
-                                <rect key="frame" x="30" y="491" width="333" height="40.000000000000057"/>
+                                <rect key="frame" x="30" y="491.66666666666669" width="333" height="40.000000000000057"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="73I-us-6oA"/>
                                 </constraints>
@@ -79,6 +79,7 @@
                             <constraint firstItem="Ald-ny-RcH" firstAttribute="top" secondItem="mGi-X6-fFU" secondAttribute="bottom" constant="70" id="qze-aQ-pJm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vgh-rC-oFX"/>
                     <connections>
                         <outlet property="emailTextField" destination="sad-5H-6Ma" id="FaE-FO-7Ua"/>
                         <outlet property="passwordTextField" destination="0sV-mS-KRP" id="veX-K8-6ct"/>
@@ -87,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-166" y="39"/>
+            <point key="canvasLocation" x="759.5419847328244" y="38.732394366197184"/>
         </scene>
     </scenes>
     <resources>

@@ -16,11 +16,10 @@ final class LoginViewController: UIViewController, LoginViewModelDelegate {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        viewModel.delegate = self
         configureTextField(emailTextField, withPlaceholder: "E-mail")
         configureTextField(passwordTextField, withPlaceholder: "Password")
         configureLoginButton()
-        viewModel.delegate = self
     }
     //MARK: - IBActions
     @IBAction private func signUpButtonTapped(_ sender: Any) {
@@ -36,6 +35,7 @@ final class LoginViewController: UIViewController, LoginViewModelDelegate {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         let user = User(email: email, password: password)
         viewModel.login(user: user)
+        
     }
     //MARK: - Functions
     private func configureTextField(_ textField: UITextField, withPlaceholder placeholder: String) {
@@ -48,16 +48,20 @@ final class LoginViewController: UIViewController, LoginViewModelDelegate {
         textField.layer.borderWidth = 2.0
         textField.layer.borderColor = UIColor.white.cgColor
     }
+    
     private func configureLoginButton(){
         loginButton.layer.cornerRadius = 15.0
     }
+    
     func loginSucceeded() {
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            if let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController {
-                self.navigationController?.pushViewController(homeViewController, animated: true)
-            }
             
+            if let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabbarController") as? UITabBarController {
+                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                    sceneDelegate.window?.rootViewController = tabBarController
+                }
+            }
         }
     }
     func loginFailed(with error: String) {
@@ -66,4 +70,3 @@ final class LoginViewController: UIViewController, LoginViewModelDelegate {
         self.present(alert, animated: true, completion: nil)
     }
 }
-

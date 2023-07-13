@@ -8,22 +8,19 @@
 import UIKit
 
 class FirstTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var customimageView: UIImageView! = nil
-    @IBOutlet weak var amountLabel: UILabel!
+    //MARK: IBOutlet
+    @IBOutlet private weak var customimageView: UIImageView! = nil
+    @IBOutlet private weak var amountLabel: UILabel!
     @IBOutlet weak var karzararLabel: UILabel!
     
+    //MARK: Functions
     func setSalary(_ salary: String) {
         amountLabel.text = "Total Salary: $\(salary)"
     }
-
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
-    
 }

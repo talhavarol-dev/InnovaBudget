@@ -7,15 +7,16 @@
 
 import UIKit
 
-class NewExpenseViewController: UIViewController {
+final class NewExpenseViewController: UIViewController {
+    //MARK: IBOutlet
+    @IBOutlet private weak var ınOrExControl: UISegmentedControl!
+    @IBOutlet private weak var addButton: UIButton!
+    @IBOutlet private weak var categoriesTextField: UITextField!
+    @IBOutlet private weak var amountTextField: UITextField!
+    @IBOutlet private weak var datePicker: UIDatePicker!
+    private lazy var expenseViewModel = ExpenseViewModel()
     
-    @IBOutlet weak var ınOrExControl: UISegmentedControl!
-    @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var categoriesTextField: UITextField!
-    @IBOutlet weak var amountTextField: UITextField!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    var itemViewModel = ItemViewModel()
-    
+    //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAddButton()
@@ -23,7 +24,26 @@ class NewExpenseViewController: UIViewController {
         configureTextField(categoriesTextField, withPlaceholder: "Categories")        // Do any additional
         datePickerConfigure()
     }
-    
+    //MARK: IBActions
+    @IBAction func addButtonTapped(_ sender: Any) {
+        guard let category = categoriesTextField.text,
+              let amountString = amountTextField.text,
+              let amount = Double(amountString) else {
+            return
+        }
+        
+        let selectedDate = datePicker.date
+        let isIncome = (ınOrExControl.selectedSegmentIndex == 0) // Gelir segmenti seçiliyse true, aksi halde false
+        
+        let signedAmount = isIncome ? amount : -amount // Gelir için pozitif, gider için negatif değer
+        
+        expenseViewModel.addExpense(category: category, amount: signedAmount, date: selectedDate)
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func incomeExpenseControlValueChanged(_ sender: Any) {
+        
+    }
+    //MARK: Functions
     private func configureTextField(_ textField: UITextField, withPlaceholder placeholder: String) {
         let attributes = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -35,7 +55,7 @@ class NewExpenseViewController: UIViewController {
         textField.layer.borderColor = UIColor.white.cgColor
     }
     
-    func datePickerConfigure(){
+    private func datePickerConfigure(){
         datePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
     }
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
@@ -45,27 +65,8 @@ class NewExpenseViewController: UIViewController {
         let formattedDate = dateFormatter.string(from: selectedDate)
         print("Kullanıcı \(formattedDate) tarihini seçti.")
     }
-    
     private func configureAddButton(){
         addButton.layer.cornerRadius = 15.0
     }
-    @IBAction func addButtonTapped(_ sender: Any) {
-        guard let category = categoriesTextField.text,
-               let amountString = amountTextField.text,
-               let amount = Double(amountString) else {
-             return
-         }
-
-         let selectedDate = datePicker.date
-         let isIncome = (ınOrExControl.selectedSegmentIndex == 0) // Gelir segmenti seçiliyse true, aksi halde false
-         
-         let signedAmount = isIncome ? amount : -amount // Gelir için pozitif, gider için negatif değer
-
-         itemViewModel.addExpense(category: category, amount: signedAmount, date: selectedDate)
-         self.dismiss(animated: true, completion: nil)
-    }
     
-    @IBAction func incomeExpenseControlValueChanged(_ sender: Any) {
-        
-    }
 }

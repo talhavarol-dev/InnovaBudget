@@ -13,7 +13,7 @@ protocol SignUpViewModelDelegate: AnyObject {
     func signUpFailed(with error: String)
 }
 
-class SignUpViewModel {
+final class SignUpViewModel {
     weak var delegate: SignUpViewModelDelegate?
     
     func signUp(user: User) {
