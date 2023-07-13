@@ -11,7 +11,7 @@ final class HomeViewModel {
     private let db = Firestore.firestore()
     private var expenses: [Expense] = []
     
-     var expenseCount: Int {
+    var expenseCount: Int {
         return expenses.count
     }
     func fetchExpenses(completion: @escaping () -> Void) {

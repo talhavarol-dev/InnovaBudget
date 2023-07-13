@@ -20,7 +20,7 @@ final class NewExpenseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureAddButton()
-        configureTextField(amountTextField, withPlaceholder: "How Many")
+        configureTextField(amountTextField, withPlaceholder: "How Many Dollares?")
         configureTextField(categoriesTextField, withPlaceholder: "Categories")        // Do any additional
         datePickerConfigure()
     }
@@ -31,11 +31,10 @@ final class NewExpenseViewController: UIViewController {
               let amount = Double(amountString) else {
             return
         }
-        
         let selectedDate = datePicker.date
         let isIncome = (ınOrExControl.selectedSegmentIndex == 0) // Gelir segmenti seçiliyse true, aksi halde false
         
-        let signedAmount = isIncome ? amount : -amount // Gelir için pozitif, gider için negatif değer
+        let signedAmount = isIncome ? -amount : amount // Gelir için pozitif, gider için negatif değer
         
         expenseViewModel.addExpense(category: category, amount: signedAmount, date: selectedDate)
         self.dismiss(animated: true, completion: nil)

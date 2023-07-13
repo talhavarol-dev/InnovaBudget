@@ -61,7 +61,8 @@ final class HomeViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
-    }
+        let indexPath = IndexPath(row: 0, section: 0)
+        self.tableView.reloadRows(at: [indexPath], with: .automatic)    }
     //MARK: Functions
     private func fetchData() {
         homeViewModel.fetchExpenses { [weak self] in
@@ -79,7 +80,7 @@ final class HomeViewController: UIViewController {
         }
     }
 }
-    //MARK: Extensions
+//MARK: Extensions
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeViewModel.expenseCount + 1
@@ -88,14 +89,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "FirstCell", for: indexPath) as! FirstTableViewCell
-            cell.karzararLabel.text = "Toplam Kar-Zarar: $\(Int(self.totalAmount))"
-            
-            if let savedSalary = UserDefaults.standard.string(forKey: "salary") {
+            if let savedSalary = UserDefaults.standard.string(forKey: "salary"), let salaryValue = Double(savedSalary) {
+                let totalAmountPositive = abs(self.totalAmount)
+                let karZarar = salaryValue - totalAmountPositive
+                cell.totalLabel.text = "Total Amount: $\(Int(karZarar))"
                 cell.setSalary(savedSalary)
+                let indexPath = IndexPath(row: 0, section: 0)
+                self.tableView.reloadRows(at: [indexPath], with: .automatic)
+            } else {
+                cell.totalLabel.text = "Total Amount: Salary data not available."
             }
             return cell
-        }
-        else {
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SecondCell", for: indexPath) as! SecondTableViewCell
             if let expense = homeViewModel.getExpense(at: indexPath.row - 1) {
                 cell.configure(with: expense)

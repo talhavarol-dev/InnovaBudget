@@ -22,8 +22,8 @@
                                     <constraint firstAttribute="height" constant="40" id="BE3-vn-vH5"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Income"/>
                                     <segment title="Expense"/>
+                                    <segment title="Income"/>
                                 </segments>
                                 <connections>
                                     <action selector="incomeExpenseControlValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="QRA-FQ-MD8"/>
@@ -40,7 +40,7 @@
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wtb-k1-irX">
                                         <rect key="frame" x="0.0" y="76" width="333" height="50"/>
@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="7du-Vv-WLt">
-                                <rect key="frame" x="60" y="399" width="303" height="34"/>
+                                <rect key="frame" x="60" y="399" width="303" height="34.333333333333314"/>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

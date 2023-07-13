@@ -13,7 +13,7 @@ import Firebase
 final class ExpenseViewModel {
     private let db = Firestore.firestore()
     private var expenses: [Expense] = []
-
+    
     var expenseCount: Int {
         return expenses.count
     }

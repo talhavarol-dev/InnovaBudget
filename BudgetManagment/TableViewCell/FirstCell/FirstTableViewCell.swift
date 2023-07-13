@@ -11,7 +11,7 @@ class FirstTableViewCell: UITableViewCell {
     //MARK: IBOutlet
     @IBOutlet private weak var customimageView: UIImageView! = nil
     @IBOutlet private weak var amountLabel: UILabel!
-    @IBOutlet weak var karzararLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
     
     //MARK: Functions
     func setSalary(_ salary: String) {

@@ -58,6 +58,7 @@ final class SignUpViewController: UIViewController, SignUpViewModelDelegate {
                 }}}))
         self.present(alert, animated: true, completion: nil)
     }
+    
     func signUpFailed(with error: String) {
         let alert = UIAlertController(title: "HATA", message: error, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))

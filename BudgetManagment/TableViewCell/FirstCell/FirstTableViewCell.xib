@@ -54,7 +54,7 @@
             <connections>
                 <outlet property="amountLabel" destination="Y19-d1-FpT" id="AtB-j8-9YJ"/>
                 <outlet property="customimageView" destination="Fdc-Me-vWi" id="CIT-Fx-jbE"/>
-                <outlet property="karzararLabel" destination="F3p-kd-RDt" id="D7T-5x-IiW"/>
+                <outlet property="totalLabel" destination="F3p-kd-RDt" id="A7H-Mz-yBD"/>
             </connections>
             <point key="canvasLocation" x="160.30534351145039" y="39.7887323943662"/>
         </tableViewCell>

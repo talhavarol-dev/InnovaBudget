@@ -35,7 +35,6 @@ final class LoginViewController: UIViewController, LoginViewModelDelegate {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         let user = User(email: email, password: password)
         viewModel.login(user: user)
-        
     }
     //MARK: - Functions
     private func configureTextField(_ textField: UITextField, withPlaceholder placeholder: String) {
@@ -56,7 +55,6 @@ final class LoginViewController: UIViewController, LoginViewModelDelegate {
     func loginSucceeded() {
         DispatchQueue.main.async {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            
             if let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabbarController") as? UITabBarController {
                 if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
                     sceneDelegate.window?.rootViewController = tabBarController
