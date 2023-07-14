@@ -13,7 +13,7 @@ Firebase ile sadece Auth işlemleri değil, veri kaydetme, veri silme işlemleri
 
 Hackatlon günü Tabbar da yaşadığım buglardan dolayı Döviz Api bağlayamadım. 
 Hali hazırda ve github profilimde bulunan Eureka projesinde kullandığım:
-"Async/Await URLSessions Generic Layer" katmanını entegre Budget Managment projeme dahil edemedim.
+"Async/Await URLSessions Generic Layer" katmanını Budget Managment projeme dahil edemedim.
 
 ## Genel Yapı
 
