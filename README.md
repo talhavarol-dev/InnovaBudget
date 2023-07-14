@@ -23,6 +23,57 @@ Kullanıcıdan aldığım Maaş bilgisini UserDefault üzerinde tuttum. Onun har
 Auto Layout konusunda StackView yapısı kullanmaya özen gösterdim. iPhone 14 Pro ve iPhone SE  modellerinde AutoLayout ile ilgili herhangi bir problem yaşamadım.
 Uygulama içerisinde tek bir Storyboard dosyası üzerinde çalışılmamıştır. Her ekran ayrı bir Storyboard olacak şekilde tasarlanmış ve gerekli yerlerde XIB yapısı kullanılmıştır.
 
+### Protokol ve Delegate Yapısı ViewModel
+```swift
+protocol LoginViewModelDelegate: AnyObject {
+    func loginSucceeded()
+    func loginFailed(with error: String)
+}
+
+final class LoginViewModel {
+    weak var delegate: LoginViewModelDelegate?
+    
+    func login(user: User) {
+        Auth.auth().signIn(withEmail: user.email, password: user.password) { [weak self] authResult, error in
+            if let error = error {
+                let authError = error as NSError
+                switch authError.code {
+                case AuthErrorCode.wrongPassword.rawValue:
+                    self?.delegate?.loginFailed(with: "Yanlış parola")
+                case AuthErrorCode.invalidEmail.rawValue:
+                    self?.delegate?.loginFailed(with: "Geçersiz e-posta")
+                case AuthErrorCode.userNotFound.rawValue:
+                    self?.delegate?.loginFailed(with: "Bu kullanıcı bulunamadı")
+                default:
+                    self?.delegate?.loginFailed(with: "Bilinmeyen hata: \(authError.localizedDescription)")
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self?.delegate?.loginSucceeded()
+                }
+            }
+        }
+    }
+}
+```
+### Access Level Örneği
+```swift
+final class LoginViewController: UIViewController, LoginViewModelDelegate {
+    //MARK: IBOutlets
+    private lazy var viewModel = LoginViewModel()
+    @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
+```
+
+### Uygulama içerisinde "unwrapping" yapmamaya özen gösterim. Genel olarak Guard Let yapısını kullandım.
+```swift
+    @IBAction private func signUpButtonTapped(_ sender: Any) {
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+        let user = User(email: email, password: password)
+        viewModel.signUp(user: user)
+    }
+```
 ## Ekranlar
 
 Login Ekranı, Sign Ekranı, Home Ekranı, Pop-up olarak eklenen maaş ekranı, Gelir-Gider ekranı ve son olarak Ayarlar ekranı bulunmaktadır.
