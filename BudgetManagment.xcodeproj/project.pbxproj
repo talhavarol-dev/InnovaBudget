@@ -184,11 +184,11 @@
 		71D191542A5E943E0050DC3D /* BudgetManagment */ = {
 			isa = PBXGroup;
 			children = (
-				71B4F1552A5FEC51003118AC /* TableViewCell */,
 				71B4F1542A5FEBB0003118AC /* Core */,
-				71B4F1532A5FEB85003118AC /* ViewController */,
 				71B4F1522A5FEB69003118AC /* Model */,
 				7128C0E82A5ECF1200134365 /* ViewModels */,
+				71B4F1532A5FEB85003118AC /* ViewController */,
+				71B4F1552A5FEC51003118AC /* TableViewCell */,
 				7128C0E72A5ECF0100134365 /* Scenes */,
 				71D1915E2A5E943E0050DC3D /* BudgetManagment.xcdatamodeld */,
 				71B4F1562A601C32003118AC /* Assets.xcassets */,

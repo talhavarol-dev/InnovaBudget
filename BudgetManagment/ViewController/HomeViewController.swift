@@ -21,7 +21,6 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         self.navigationItem.hidesBackButton = true
-        tabBarController?.tabBar.isHidden = false
         tableView.register(UINib(nibName: "FirstTableViewCell", bundle: nil), forCellReuseIdentifier: "FirstCell")
         tableView.register(UINib(nibName: "SecondTableViewCell", bundle: nil), forCellReuseIdentifier: "SecondCell")
         fetchData()

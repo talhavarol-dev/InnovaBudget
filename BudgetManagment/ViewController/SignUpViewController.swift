@@ -20,6 +20,7 @@ final class SignUpViewController: UIViewController, SignUpViewModelDelegate {
         configureTextField(emailTextField, withPlaceholder: "E-mail")
         configureTextField(passwordTextField, withPlaceholder: "Password")
         configureLoginButton()
+        self.navigationItem.hidesBackButton = true
         viewModel.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self

@@ -8,7 +8,7 @@
 import UIKit
 
 final class LoginViewController: UIViewController, LoginViewModelDelegate {
-    //MARK: - IBOutlets
+    //MARK: IBOutlets
     private lazy var viewModel = LoginViewModel()
     @IBOutlet private weak var loginButton: UIButton!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -23,6 +23,7 @@ final class LoginViewController: UIViewController, LoginViewModelDelegate {
     }
     //MARK: - IBActions
     @IBAction private func signUpButtonTapped(_ sender: Any) {
+        print("signup button tapped")
         let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
         if let signupViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
             self.navigationController?.pushViewController(signupViewController, animated: true)

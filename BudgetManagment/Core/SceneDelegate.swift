@@ -18,16 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if Auth.auth().currentUser != nil {
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
             let tabBarController = storyboard.instantiateViewController(withIdentifier: "tabbarController") as? UITabBarController
-            self.window?.rootViewController = tabBarController
+            let navigationController = UINavigationController(rootViewController: tabBarController!)
+            self.window?.rootViewController = navigationController
         }
-        // Kullanıcı giriş yapmamış
         else {
             let storyboard = UIStoryboard(name: "Login", bundle: nil)
-
             let loginViewController = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
-            self.window?.rootViewController = loginViewController
+            let navigationController = UINavigationController(rootViewController: loginViewController!)
+            self.window?.rootViewController = navigationController
         }
-        
+
         self.window?.makeKeyAndVisible()
     }
 
